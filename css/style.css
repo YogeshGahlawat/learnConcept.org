@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap');
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    letter-spacing: 1px; word-spacing: 1px; scroll-behavior: smooth;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body{
+    position: relative;
+    overflow-y: hidden;
+}
+
+@media screen and (min-width: 0){
+
+    /* Navigation Panel */
+    nav{
+        width: 100%;
+        min-height: 8vh;
+        background-color: rgba(30, 2, 83, 1);
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: relative;
+        left: 0;
+        top: 0;
+        z-index: 100;
+    }
+    nav a{
+        text-decoration: none;
+        color: #FFF;
+        padding: 15px;
+        text-transform: capitalize;
+    }
+    nav a#logo{
+        padding: 15px 45px;
+        background-color: #FFF;
+        color: rgba(30, 2, 83, 1);
+        text-transform: none;
+        border-radius: 0 0 20px 20px;
+    }
+    nav .left-menu, nav .right-menu{
+        display: none;
+    }
+    nav .right-icon{
+        cursor: pointer;
+        padding: 5px;
+        background-color: #FFF;
+        align-self: center;
+        border-radius: 10px;
+    }
+    nav .right-icon div{
+        width: 30px;
+        height: 3px;
+    }
+    #menu{
+        display: none;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .menu a{
+        padding: 15px;
+        text-decoration: none;
+        color: rgba(30, 2, 83, 1);
+        text-transform: capitalize;
+    }
+    .menu a:hover{
+        background-color: rgba(30, 2, 83, 1);
+        color: #FFF;
+    }
+    #courses{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(30, 2, 83, 1);
+        color: #FFF;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: 1s all linear;
+        overflow-y: scroll;
+        z-index: 100;
+    }
+    .courses a#closebtn{
+        position: fixed;
+        text-decoration: none;
+        font-size: 2em;
+        padding: 10px;
+        background-color: #FFF;
+        color: rgba(30, 2, 83, 1);
+        border-radius: 0 10px 10px 0;
+    }
+    .courses .mainCategory{
+        width: auto;
+        margin: auto;
+        margin-top: 20%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .courses .mainCategory .category{
+        padding: 10px;
+        width: 400px;
+    }
+    .courses .mainCategory .category h2{
+        text-transform: uppercase;
+    }
+    .courses .mainCategory .category .course a{
+        display: block;
+        padding: 15px;
+        color: #FFF;
+        text-decoration: none;
+    }
+    .courses .mainCategory .category .course a:hover{
+        background-color: #FFF;
+        color: rgba(30, 2, 83, 1);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Navigation Panel */
+    .courses .mainCategory{
+        margin-top: 10%;
+    }
+}
+
+@media screen  and (min-width: 1024px){
+    /* Naviation Panel */
+    nav .right-icon, #menu{
+        display: none;
+    }
+    nav .left-menu, nav .right-menu{
+        display: flex;
+    }
+    nav .left-menu a:hover{
+        border-bottom: 1px solid #FFF;
+    }
+    nav .right-menu a{
+        margin: 0 5px;
+        padding: 15px 45px;
+        background-color: #FFF;
+        color: rgba(30, 2, 83, 1);
+        border-radius: 0 0 20px 20px;
+    }
+    .courses .mainCategory{
+        margin-top: 5%;
+    }
+}
